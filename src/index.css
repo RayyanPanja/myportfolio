@@ -1,0 +1,29 @@
+:root {
+  --background-clr: #121212;
+
+  --primary-clr: #00E5FF;
+  --secondary-clr: #0097A7;
+
+  --light-clr: #fff;
+  --dark-clr: #000;
+  --grey-clr: #555;
+  --gray-clr: #444;
+
+  --font-clr: #efefef;
+  --gradient-clr: linear-gradient(45deg,var(--dark-clr),var(--primary-clr));
+
+  --top-lv-element: 999999;
+
+  --media-screen-width: 660px;
+
+  --super-fonts: 'Clash Display';
+}
+
+::-webkit-scrollbar{
+  width: 3px;
+  background: var(--primary-clr);
+}
+*::selection{
+  background: var(--primary-clr);
+  color: var(--dark-clr);
+}

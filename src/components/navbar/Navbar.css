@@ -1,0 +1,123 @@
+.navbar {
+    width: 100%;
+    padding: 5px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+
+    border-bottom: 2px solid var(--primary-clr);
+    background: var(--background-clr);
+
+    z-index: var(--top-lv-element);
+}
+
+.nav-logo {
+    width: 5%;
+}
+
+.nav-logo>h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--primary-clr);
+}
+
+.nav-link-set {
+    width: 90%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.nav-links {
+    position: relative;
+    padding: 5px;
+    font-size: 20px;
+    border: 0;
+    background: transparent;
+    color: var(--light-clr);
+    transition: all .5s;
+}
+
+.nav-links:hover {
+    color: var(--primary-clr);
+    text-shadow: 0 0 5px var(--primary-clr);
+}
+
+.nav-links::before,
+.nav-links::after {
+    content: '';
+    position: absolute;
+    background-color: var(--secondary-clr);
+    height: 2px;
+    width: 0;
+    transition: all .4s ease-in-out;
+}
+
+.nav-links:hover::before,
+.nav-links:hover::after {
+    width: 50%;
+    box-shadow: 0 0 5px 0 var(--primary-clr);
+}
+
+.nav-links::after {
+    right: 0;
+    bottom: 0;
+}
+
+.nav-links::before {
+    top: 0;
+    left: 0;
+}
+
+.icon {
+    display: none;
+}
+
+.to-top {
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+
+    padding: 10px;
+
+    background: var(--secondary-clr);
+    font-size: 30px;
+    color: var(--light-clr);
+
+    z-index: var(--top-lv-element);
+}
+
+@media screen and (max-width: 660px) {
+    .nav-links:not(:first-child) {
+        display: none;
+    }
+
+    .flex {
+        display: flex !important;
+    }
+
+    .grid {
+        display: grid !important;
+    }
+
+    .none {
+        display: none !important;
+    }
+    .block{
+        display: block !important;
+    }
+
+    .icon {
+        display: block;
+        position: relative;
+        width: 5%;
+        font-size: 20px;
+        background: transparent;
+        color: var(--primary-clr);
+        border: 0;
+    }
+
+
+}
